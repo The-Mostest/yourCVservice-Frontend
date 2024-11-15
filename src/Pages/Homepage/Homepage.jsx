@@ -1,3 +1,4 @@
+import AddInterview from "../JobInterview/AddInterview/AddInterView"
 
 
 const Homepage = () => {
@@ -8,7 +9,7 @@ const Homepage = () => {
     return (
         <>
         
-        
+        <AddInterview />
         
         
         
