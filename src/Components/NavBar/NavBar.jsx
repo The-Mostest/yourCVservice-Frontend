@@ -1,35 +1,32 @@
+import NavBurger from "./NavBurger"
 
-import { useDisclosure } from '@mantine/hooks'
-import { Burger } from '@mantine/core'
+import { Link } from 'react-router-dom'
+
+import styles from "../NavBar/NavBar.module.scss"
+
 
 
 const NavBar = () => {
-
-    const [opened, { toggle }] = useDisclosure()
-    console.log(opened)
 
 
     return (
         <>
 
 
-        
-            <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" style={{position: 'fixed'}} />
+<nav className={styles.mobile}>
+<NavBurger />
+</nav>
 
-            {opened && (
-                <>
-
-                    <img src="/images/logo.png" alt="Website Logo" style={{ width: "100px", height: "auto" }} />
-                    <h1>Link</h1>
-                    <h1>Link</h1>
-                    <h1>Link</h1>
-                    <h1>Link</h1>
-
-                </>
-
-            )}
-
-
+<nav>
+    <div className={styles.desktop}>
+    <img src="/images/logo.png" alt="Website Logo"/>
+    < Link to='/'>User Home</Link>
+    < Link to='/signup'>signup</Link>
+    < Link to='/CV'>CV</Link>
+    < Link to='/signup'>signup</Link>
+    < Link to='/advice'>Advice On Interviews</Link>
+    </div>
+</nav>
 
 
 

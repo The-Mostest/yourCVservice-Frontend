@@ -9,7 +9,7 @@ const CVPage = () => {
 
     return (
         <>
-        
+        <h1>CV Page</h1>
         
         
         
