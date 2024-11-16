@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^7.14.0",
+    "@mantine/hooks": "^7.14.0",
+    "@mantine/nprogress": "^7.14.0",
     "@mapbox/search-js-react": "^1.0.0-beta.22",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
@@ -21,7 +24,7 @@
     "react-images-uploading": "^3.1.7",
     "react-router-dom": "^6.28.0",
     "reactjs-popup": "^2.0.6",
-    "sass": "^1.80.7",
+    "sass": "^1.81.0",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
@@ -34,6 +37,9 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
+    "postcss": "^8.4.49",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
     "vite": "^5.4.10"
   }
 }
