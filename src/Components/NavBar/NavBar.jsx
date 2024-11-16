@@ -21,10 +21,10 @@ const NavBar = () => {
     <div className={styles.desktop}>
     <img src="/images/logo.png" alt="Website Logo"/>
     < Link to='/'>User Home</Link>
-    < Link to='/signup'>signup</Link>
     < Link to='/CV'>CV</Link>
-    < Link to='/signup'>signup</Link>
     < Link to='/advice'>Advice On Interviews</Link>
+    < Link to='/signin'>signin</Link>
+    < Link to='/signup'>signup</Link>
     </div>
 </nav>
 
