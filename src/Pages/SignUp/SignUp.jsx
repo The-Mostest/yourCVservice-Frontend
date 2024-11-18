@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
 
     return (
         <>
-        <h1>Sign Up </h1>
+        {/* <h1>Sign Up </h1> */}
         {error.errorMessage && <p style={{ color: "red" }}>{error.errorMessage}</p>}
 
         

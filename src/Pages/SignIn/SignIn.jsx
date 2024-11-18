@@ -44,7 +44,7 @@ const SignIn = ({setUser, close}) => {
 
     return (
         <>
-            <h1>Sign In</h1>
+            {/* <h1>Sign In</h1> */}
 
             {error.errorMessage && <p style={{ color: "red" }}>{error.errorMessage}</p>}
 

@@ -37,13 +37,7 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
                         :
                         (
                             <>
-                                <Modal opened={opened} onClose={close} centered withCloseButton={false} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
-                                    <img
-                                        src="/images/CloseIcon.png"
-                                        alt="Close Modal"
-                                        style={{ cursor: "pointer", position: "absolute", top: "10px", right: "10px", height: '25px' }}
-                                        onClick={close}
-                                    />
+                                <Modal opened={opened} onClose={close} centered withCloseButton={true} title={<h1>Sign Up </h1>} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
                                     <SignIn setUser={setUser} close={close} />
                                 </Modal>
                                 < Link onClick={open} >sign in</Link>
