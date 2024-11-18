@@ -27,31 +27,9 @@ const AddInterview = () => {
     }
 
     const handleChange = (e) => {
-        const {
-            company,
-            company_description,
-            applying_role,
-            job_description,
-            salary,
-            interviewer_name,
-            benefits,
-            notes,
-            date,
-            value
-        } = e.target;
-        setFormData({
-            ...formData,
-            company,
-            company_description,
-            applying_role,
-            job_description,
-            salary,
-            interviewer_name,
-            benefits,
-            notes,
-            date
-        });
-    };
+        const {name, value} = e.target
+        setFormData({...formData, [name] : value})
+    }
 
 
     return (
