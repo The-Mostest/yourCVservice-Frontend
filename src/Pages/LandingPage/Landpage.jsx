@@ -15,21 +15,10 @@ const LandingPage = ({ setUser }) => {
                 onClose={() => setSlowTransitionOpened(false)}
                 transitionProps={{ transition: "scale" }}
                 centered
-                withCloseButton={false}
+                title={<h1>Sign Up </h1>}
+                withCloseButton={true}
                 overlayProps={{ backgroundOpacity: 0.6, blur: 2 }}
             >
-                <img
-                    src="/images/CloseIcon.png"
-                    alt="Close Modal"
-                    style={{
-                        cursor: "pointer",
-                        position: "absolute",
-                        top: "10px",
-                        right: "10px",
-                        height: "25px",
-                    }}
-                    onClick={() => setSlowTransitionOpened(false)}
-                />
                 <SignUp setUser={setUser} close={() => setSlowTransitionOpened(false)} />
             </Modal>
 
