@@ -42,7 +42,7 @@ function App() {
           </>
         ) : (
           <>
-            <Route path="/" element={<LandingPage setUser={setUser}/>} />
+            <Route path="/" element={<LandingPage setUser={setUser} />} />
             <Route path="/signup/" element={<SignUp setUser={setUser} />} />
             <Route path="/signin/" element={<SignIn setUser={setUser} />} />
           </>
