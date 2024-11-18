@@ -3,15 +3,15 @@
 const tokenName = "AUTH_TOKEN"
 
 export const setToken = (token) => {
-    localStorage.setItem(tokenName, token)
+    return localStorage.setItem(tokenName, token)
 }
 
 export const getToken = () => {
-    localStorage.getItem(tokenName)
+    return localStorage.getItem(tokenName)
 }
 
 export const removeToken = () => {
-    localStorage.removeItem(tokenName)
+    return localStorage.removeItem(tokenName)
 }
 
 export const getUser = () => {

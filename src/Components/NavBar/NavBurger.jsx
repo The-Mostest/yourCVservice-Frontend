@@ -5,9 +5,14 @@ import { Transition } from '@mantine/core'
 
 import styles from '../NavBar/NavBar.module.scss'
 
-const NavBurger = () => {
+const NavBurger = ({ user, handleSignOut }) => {
 
     const [opened, { toggle }] = useDisclosure()
+
+    const closeAndClick = () => {
+        handleSignOut()
+        toggle()
+    }
 
     return (
         <>
@@ -37,11 +42,22 @@ const NavBurger = () => {
 
                         <h3>
                             <img src="/images/logo.png" alt="Website Logo" />
-                            <Link to="/" onClick={toggle}>  Home   </Link>
-                            <Link to="/signin" onClick={toggle}>    signin  </Link>
-                            <Link to="/CV" onClick={toggle}>    CV  </Link>
-                            <Link to="/signup" onClick={toggle}>    signup  </Link>
-                            <Link to="/advice" onClick={toggle}>    Advice On Interviews    </Link>
+                            < Link to='/' onClick={toggle}> Home    </Link>
+                            < Link to='/CV' onClick={toggle}>   CV  </Link>
+                            < Link to='/advice' onClick={toggle}>   Advice On Interviews    </Link>
+
+                            {user ? (
+                                < Link to='/' onClick={closeAndClick} >  Sign out    </Link>
+
+                            )
+                                :
+                                (
+                                    <>
+                                        < Link to='/signin' onClick={toggle}>   Sign In  </Link>
+                                        < Link to='/signup' onClick={toggle}>   Sign Up  </Link>
+                                    </>
+                                )
+                            }
                         </h3>
                     </div>
                 )}
