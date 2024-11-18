@@ -1,3 +1,5 @@
+
+
 import { useState } from "react"
 import { signin } from "../../services/userService"
 import { useNavigate } from "react-router-dom"
@@ -5,7 +7,8 @@ import { useNavigate } from "react-router-dom"
 
 
 
-const SignIn = ({setUser}) => {
+
+const SignIn = ({setUser, close}) => {
     const [error, setError] = useState({})
 
 
@@ -24,6 +27,7 @@ const SignIn = ({setUser}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        close()
 
         try {
             const {user} = await signin(formData)

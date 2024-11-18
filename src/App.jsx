@@ -17,16 +17,18 @@ import Advice from "./Pages/Advice/Advice"
 function App() {
 const [user, setUser] = useState(getUser())
 
+
 const handleSignOut = async () => {
     removeToken()
     setUser(null)
+    
 }
 
 
   return (
     <>
     <nav>
-    <NavBar user={user} handleSignOut={handleSignOut}/>
+    <NavBar user={user} handleSignOut={handleSignOut} setUser={setUser}/>
     </nav>
 
     <Routes>

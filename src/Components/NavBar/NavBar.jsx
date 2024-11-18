@@ -1,12 +1,16 @@
-import NavBurger from "./NavBurger"
-
 import { Link } from 'react-router-dom'
+import { useDisclosure } from "@mantine/hooks"
+import { Modal } from "@mantine/core"
 
+
+import NavBurger from "./NavBurger"
 import styles from "../NavBar/NavBar.module.scss"
+import SignIn from '../../Pages/SignIn/SignIn'
 
 
 
-const NavBar = ({ user, handleSignOut }) => {
+const NavBar = ({ user, handleSignOut, setUser }) => {
+    const [opened, { open, close }] = useDisclosure(false);
 
 
     return (
@@ -27,12 +31,22 @@ const NavBar = ({ user, handleSignOut }) => {
                     {user ? (
                         < Link to='/' onClick={handleSignOut}>Sign out</Link>
 
-                        )
+                    )
                         :
                         (
                             <>
-                                < Link to='/signin'>signin</Link>
-                                < Link to='/signup'>signup</Link>
+                                <Modal opened={opened} onClose={close} centered withCloseButton={false}>
+                                    <img
+                                        src="/images/CloseIcon.png"
+                                        alt="Close Modal"
+                                        style={{ cursor: "pointer", position: "absolute", top: "10px", right: "10px", height: '25px'}}
+                                        onClick={close}
+                                    />
+                                    <SignIn setUser={setUser} close={close}/>
+                                </Modal>
+                                < Link onClick={open} >sign in</Link>
+
+                                < Link to='/signup'>sign up</Link>
                             </>
                         )
                     }
