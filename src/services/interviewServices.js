@@ -1,4 +1,5 @@
-import axios from "axios";
+import {axiosAuth as axios} from './interceptors'
+
 
 const BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/job-interviews`
 

@@ -37,7 +37,7 @@ const NavBurger = () => {
 
                         <h3>
                             <img src="/images/logo.png" alt="Website Logo" />
-                            <Link to="/" onClick={toggle}>  User Home   </Link>
+                            <Link to="/" onClick={toggle}>  Home   </Link>
                             <Link to="/signin" onClick={toggle}>    signin  </Link>
                             <Link to="/CV" onClick={toggle}>    CV  </Link>
                             <Link to="/signup" onClick={toggle}>    signup  </Link>
