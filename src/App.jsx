@@ -13,37 +13,43 @@ import UpdateInterview from "./Pages/JobInterview/UpdateInterview/UpdateIntervie
 import NavBar from "./Components/NavBar/NavBar"
 import CVPage from "./Pages/CV/CV"
 import Advice from "./Pages/Advice/Advice"
+import NotFound from "./Pages/404"
 
 function App() {
-const [user, setUser] = useState(getUser())
+  const [user, setUser] = useState(getUser())
 
 
-const handleSignOut = async () => {
+  const handleSignOut = async () => {
     removeToken()
     setUser(null)
-    
-}
+
+  }
 
 
   return (
     <>
-    <nav>
-    <NavBar user={user} handleSignOut={handleSignOut} setUser={setUser}/>
-    </nav>
+      <nav>
+        <NavBar user={user} handleSignOut={handleSignOut} setUser={setUser} />
+      </nav>
 
-    <Routes>
-      {user ? 
-      <Route path="/" element={<Homepage />}/>
-      :
-      <Route path="/" element={<LandingPage />}/>
-    }
-      <Route path="/signup/" element={<SignUp setUser={setUser} />}/>
-      <Route path="/signin/" element={<SignIn setUser={setUser}/>}/>
-      <Route path="/jobinterview" element={<ShowInterview />}/>
-      <Route path="/jobinterview/:jobId/edit" element={<UpdateInterview />}/>
-      <Route path="/advice" element={<Advice />}/>
-      <Route path="/CV" element={<CVPage />}/>
-    </Routes>
+      <Routes>
+        {user ? (
+          <>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/jobinterview" element={<ShowInterview />} />
+            <Route path="/jobinterview/:jobId/edit" element={<UpdateInterview />} />
+            <Route path="/CV" element={<CVPage />} />
+          </>
+        ) : (
+          <>
+            <Route path="/" element={<LandingPage setUser={setUser}/>} />
+            <Route path="/signup/" element={<SignUp setUser={setUser} />} />
+            <Route path="/signin/" element={<SignIn setUser={setUser} />} />
+          </>
+        )}
+        <Route path="/advice" element={<Advice />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
     </>
   )

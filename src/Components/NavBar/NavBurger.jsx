@@ -42,8 +42,8 @@ const NavBurger = ({ user, handleSignOut }) => {
 
                         <h3>
                             <img src="/images/logo.png" alt="Website Logo" />
-                            < Link to='/' onClick={toggle}> Home    </Link>
-                            < Link to='/CV' onClick={toggle}>   CV  </Link>
+                            < Link to='/' onClick={toggle}>         Home                    </Link>
+                            < Link to='/CV' onClick={toggle}>       CV                      </Link>
                             < Link to='/advice' onClick={toggle}>   Advice On Interviews    </Link>
 
                             {user ? (

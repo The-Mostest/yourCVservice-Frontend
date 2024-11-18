@@ -25,28 +25,28 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
                 <div className={styles.desktop}>
                     <img src="/images/logo.png" alt="Website Logo" />
                     < Link to='/'>Home</Link>
-                    < Link to='/CV'>CV</Link>
                     < Link to='/advice'>Advice On Interviews</Link>
 
                     {user ? (
-                        < Link to='/' onClick={handleSignOut}>Sign out</Link>
+                        <>
+                            < Link to='/CV'>CV</Link>
+                            < Link to='/' onClick={handleSignOut}>Sign out</Link>
+                        </>
 
                     )
                         :
                         (
                             <>
-                                <Modal opened={opened} onClose={close} centered withCloseButton={false}>
+                                <Modal opened={opened} onClose={close} centered withCloseButton={false} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
                                     <img
                                         src="/images/CloseIcon.png"
                                         alt="Close Modal"
-                                        style={{ cursor: "pointer", position: "absolute", top: "10px", right: "10px", height: '25px'}}
+                                        style={{ cursor: "pointer", position: "absolute", top: "10px", right: "10px", height: '25px' }}
                                         onClick={close}
                                     />
-                                    <SignIn setUser={setUser} close={close}/>
+                                    <SignIn setUser={setUser} close={close} />
                                 </Modal>
                                 < Link onClick={open} >sign in</Link>
-
-                                < Link to='/signup'>sign up</Link>
                             </>
                         )
                     }

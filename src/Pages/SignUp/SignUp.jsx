@@ -3,7 +3,7 @@ import { signup } from "../../services/userService"
 import { useNavigate } from "react-router-dom"
 
 
-const SignUp = (props) => {
+const SignUp = ({setUser, close}) => {
 const [error, setError] = useState({})
 
 
@@ -24,14 +24,14 @@ const handleChange = (e) => {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-
+    close()
     if (formData.password !== formData.password_confirmation) {
         setError({ errorMessage: 'Passwords Do Not Match'})
     }
 
     try {
         const user = await signup(formData) 
-        props.setUser(user)
+        setUser(user)
         navigate('/')
     } catch (error) {
         console.log(error)
