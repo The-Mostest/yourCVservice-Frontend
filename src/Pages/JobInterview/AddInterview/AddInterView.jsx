@@ -1,10 +1,14 @@
 import { useState } from "react"
 
+import { createInterview } from "../../../services/interviewServices";
+import { useNavigate } from "react-router-dom";
 
 
 
-const AddInterview = () => {
+const AddInterview = ({close}) => {
     const [error, setError] = useState({})
+
+    const nav = useNavigate()
 
     const [formData, setFormData] = useState({
         company: '',
@@ -22,10 +26,24 @@ const AddInterview = () => {
     });
 
 
-    const handleSubmit = () => {
-
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        close()
+        // ADD THING THERE ? SET INTERVIEWS?
+        nav('/')
+        try {
+            const interview = await createInterview(formData)
+            setFormData(interview)
+        } catch (error) {
+            console.log(error)
+            setError({errorMessage: 'Cannot Add Interview'})
+        }
     }
 
+const handleChange = (e) => {
+    const {name, value} = e.target
+    setFormData({...formData, [name]: value})
+}
     const handleChange = (e) => {
         const {name, value} = e.target
         setFormData({...formData, [name] : value})
@@ -34,7 +52,7 @@ const AddInterview = () => {
 
     return (
         <>
-            <h1>Job Interview Form</h1>
+            {/* <h1>Job Interview Form</h1> */}
             {error.errorMessage && <p style={{ color: "red" }}>{error.errorMessage}</p>}
 
             <form onSubmit={handleSubmit}>

@@ -14,6 +14,7 @@ import NavBar from "./Components/NavBar/NavBar"
 import CVPage from "./Pages/CV/CV"
 import Advice from "./Pages/Advice/Advice"
 import NotFound from "./Pages/404"
+import IndexInterview from "./Pages/JobInterview/IndexInterview"
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -36,7 +37,8 @@ function App() {
         {user ? (
           <>
             <Route path="/" element={<Homepage />} />
-            <Route path="/jobinterview" element={<ShowInterview />} />
+            <Route path="/jobinterview" element={<IndexInterview />} />
+            <Route path="/jobinterview/:jobId" element={<ShowInterview />} />
             <Route path="/jobinterview/:jobId/edit" element={<UpdateInterview />} />
             <Route path="/CV" element={<CVPage />} />
           </>
