@@ -2,6 +2,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Modal, Button } from '@mantine/core';
 
 import AddInterview from "../JobInterview/AddInterview/AddInterView"
+import IndexInterview from '../JobInterview/IndexInterview/IndexInterview';
 
 const Homepage = () => {
     const [opened, { open, close }] = useDisclosure(false);
@@ -33,10 +34,9 @@ const Homepage = () => {
                     }} />
                 <AddInterview close={close}/>
             </Modal>
-            <Button onClick={open}>Open centered Modal</Button>
+            <Button onClick={open}>Add an Interview</Button>
 
-
-
+            <IndexInterview />
 
 
 

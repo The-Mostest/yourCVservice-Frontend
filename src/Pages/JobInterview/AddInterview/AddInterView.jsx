@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const AddInterview = ({close}) => {
+const AddInterview = ({ close }) => {
     const [error, setError] = useState({})
 
     const nav = useNavigate()
@@ -15,35 +15,48 @@ const AddInterview = ({close}) => {
         company_description: '',
         applying_role: '',
         job_description: '',
-        salary: '', 
+        salary: '',
         interviewer_name: '',
         benefits: '',
         location_lat: '',
         location_long: '',
         notes: '',
-        date: '', 
-        CV: null
+        date: '',
     });
+
+    const reset = {
+            company: '',
+            company_description: '',
+            applying_role: '',
+            job_description: '',
+            salary: '',
+            interviewer_name: '',
+            benefits: '',
+            location_lat: '',
+            location_long: '',
+            notes: '',
+            date: '',
+        };
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        close()
         // ADD THING THERE ? SET INTERVIEWS?
-        nav('/')
         try {
-            const interview = await createInterview(formData)
-            setFormData(interview)
+            const {data} = await createInterview(formData)
+            setFormData(reset)
+        close()
+            nav('/')
         } catch (error) {
             console.log(error)
-            setError({errorMessage: 'Cannot Add Interview'})
+            setError({ errorMessage: 'Cannot Add Interview' })
         }
     }
 
-const handleChange = (e) => {
-    const {name, value} = e.target
-    setFormData({...formData, [name]: value})
-}
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData({ ...formData, [name]: value })
+    }
 
 
     return (
@@ -152,31 +165,11 @@ const handleChange = (e) => {
                     value={formData.date}
                     onChange={handleChange}
                 />
-                <br />
 
-                <label htmlFor="CV">Upload CV: </label>
-                <input
-                    type="file"
-                    name="CV"
-                    accept="image/*"
-                    onChange={handleChange}
-                />
                 <br />
 
                 <button>Submit</button>
             </form>
-
-
-
-
-
-
-
-
-
-
-
-
 
         </>
     )
