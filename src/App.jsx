@@ -38,7 +38,7 @@ function App() {
             <Route path="jobinterview/" element={<IndexInterview />} />
             <Route path="jobinterview/:jobId/" element={<ShowInterview />} />
             <Route path="jobinterview/:jobId/edit/" element={<UpdateInterview />} />
-            <Route path="CV/" element={<CVPage />} />
+            <Route path="CV/" element={<CVPage user={user} />} />
           </>
         ) : (
           <>

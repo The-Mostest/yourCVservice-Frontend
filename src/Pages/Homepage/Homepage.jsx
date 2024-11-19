@@ -34,7 +34,7 @@ const Homepage = () => {
                     }} />
                 <AddInterview close={close}/>
             </Modal>
-            <Button onClick={open}>Open centered Modal</Button>
+            <Button onClick={open}>Add an Interview</Button>
 
             <IndexInterview />
 

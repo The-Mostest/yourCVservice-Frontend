@@ -2,7 +2,7 @@ import UpdateInterview from "../UpdateInterview/UpdateInterview"
 import { deleteInterview, showInterview } from "../../../services/interviewServices"
 
 import { useDisclosure } from "@mantine/hooks"
-import { Modal } from "@mantine/core"
+import { Modal, Button } from "@mantine/core"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
@@ -45,11 +45,12 @@ const ShowInterview = () => {
 
     return (
         <>
-            <button onClick={handleDelete}>Delete Interview</button>
             <Modal opened={opened} onClose={close} centered withCloseButton={true} title={<h1>Sign Up </h1>} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
-                <UpdateInterview interview={interview} setInterview={setInterview} close={close}/>
+                <UpdateInterview interview={interview} setInterview={setInterview} close={close} />
             </Modal>
-            <button onClick={open}>update</button>
+
+            <Button onClick={handleDelete}>Delete Interview</Button>
+            <Button onClick={open}>Update Interview</Button>
 
             <h1>{interview.company}</h1>
             <h1>{interview.applying_role}</h1>
