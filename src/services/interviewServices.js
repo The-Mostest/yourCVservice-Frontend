@@ -1,7 +1,7 @@
-import {axiosAuth as axios} from './interceptors.js'
+import axios from './interceptors.js'
 
 
-const BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/job-interviews`
+const BASE_URL = `${import.meta.env.VITE_BACKEND_URL}/job-interviews/`
 
 //* Create
 export const createInterview = (formData) => {
@@ -15,16 +15,16 @@ export const indexInterview = () => {
 
 //* Show
 export const showInterview = (interviewId) => {
-    return axios.get(`${BASE_URL}/${interviewId}`)
+    return axios.get(`${BASE_URL}${interviewId}`)
 }
 
 //* Update
 export const updateInterview = (interviewId, formData) => {
-    return axios.put(`${BASE_URL}/${interviewId}`, formData)
+    return axios.put(`${BASE_URL}${interviewId}`, formData)
 }
 
 //* Delete
 export const deleteInterview = (interviewId) => {
-    return axios.delete(`${BASE_URL}/${interviewId}`)
+    return axios.delete(`${BASE_URL}${interviewId}`)
 }
 
