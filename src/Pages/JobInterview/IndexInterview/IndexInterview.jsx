@@ -17,7 +17,7 @@ const IndexInterview = () => {
             }
         }
         fetchInterviews()
-    }, [setInterviews])
+    }, [interviews])
 
 
     return (

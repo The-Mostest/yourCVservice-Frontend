@@ -4,7 +4,7 @@ import { Modal, Button } from '@mantine/core';
 import AddInterview from "../JobInterview/AddInterview/AddInterView"
 import IndexInterview from '../JobInterview/IndexInterview/IndexInterview';
 
-const Homepage = ({interview, setInterview}) => {
+const Homepage = () => {
     const [opened, { open, close }] = useDisclosure(false);
 
 

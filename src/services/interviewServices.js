@@ -15,16 +15,16 @@ export const indexInterview = () => {
 
 //* Show
 export const showInterview = (interviewId) => {
-    return axios.get(`${BASE_URL}${interviewId}`)
+    return axios.get(`${BASE_URL}${interviewId}/`)
 }
 
 //* Update
 export const updateInterview = (interviewId, formData) => {
-    return axios.put(`${BASE_URL}${interviewId}`, formData)
+    return axios.put(`${BASE_URL}${interviewId}/`, formData)
 }
 
 //* Delete
 export const deleteInterview = (interviewId) => {
-    return axios.delete(`${BASE_URL}${interviewId}`)
+    return axios.delete(`${BASE_URL}${interviewId}/`)
 }
 

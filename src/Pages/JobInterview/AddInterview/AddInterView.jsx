@@ -170,18 +170,6 @@ const AddInterview = ({ close }) => {
                 <button>Submit</button>
             </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
         </>
     )
 }

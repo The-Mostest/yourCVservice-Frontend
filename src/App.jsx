@@ -18,8 +18,6 @@ import IndexInterview from "./Pages/JobInterview/IndexInterview/IndexInterview"
 
 function App() {
   const [user, setUser] = useState(getUser())
-  const [interviews, setInterviews] = useState([])
-
   const handleSignOut = async () => {
     removeToken()
     setUser(null)
@@ -36,9 +34,9 @@ function App() {
       <Routes>
         {user ? (
           <>
-            <Route path="" element={<Homepage  interviews={interviews} setInterviews={setInterviews}/>} />
-            <Route path="jobinterview/" element={<IndexInterview interviews={interviews} setInterviews={setInterviews} />} />
-            <Route path="jobinterview/:jobId/" element={<ShowInterview  interviews={interviews} setInterviews={setInterviews}/>} />
+            <Route path="" element={<Homepage />} />
+            <Route path="jobinterview/" element={<IndexInterview />} />
+            <Route path="jobinterview/:jobId/" element={<ShowInterview />} />
             <Route path="jobinterview/:jobId/edit/" element={<UpdateInterview />} />
             <Route path="CV/" element={<CVPage />} />
           </>
