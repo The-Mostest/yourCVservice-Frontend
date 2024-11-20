@@ -73,9 +73,15 @@ const LandingPage = ({ setUser }) => {
 
             </div>
 
-            <img src="../../public/images/handshake.jpg" />
-
-
+            <img src="../../public/images/handshake.jpg" id={styles.handshakeImage} />
+            <h2>
+                ABOUT US
+            </h2>
+            <p>
+                Founded by Finn McDougall, our mission is to revolutionize the job search process by providing intuitive tools and expert
+                resources that empower job seekers to achieve their career goals. With a passion for innovation and a commitment to helping others succeed,
+                Finn has created a platform designed to simplify and enhance every step of your job search journey.
+            </p>
         </>
     );
 };
