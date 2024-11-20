@@ -25,27 +25,26 @@ const AddInterview = ({ close }) => {
     });
 
     const reset = {
-            company: '',
-            company_description: '',
-            applying_role: '',
-            job_description: '',
-            salary: '',
-            interviewer_name: '',
-            benefits: '',
-            location_lat: '',
-            location_long: '',
-            notes: '',
-            date: '',
-        };
+        company: '',
+        company_description: '',
+        applying_role: '',
+        job_description: '',
+        salary: '',
+        interviewer_name: '',
+        benefits: '',
+        location_lat: '',
+        location_long: '',
+        notes: '',
+        date: '',
+    };
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        // ADD THING THERE ? SET INTERVIEWS?
         try {
-            const {data} = await createInterview(formData)
+            const { data } = await createInterview(formData)
             setFormData(reset)
-        close()
+            close()
             nav('/')
         } catch (error) {
             console.log(error)

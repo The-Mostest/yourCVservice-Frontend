@@ -4,20 +4,22 @@ import { Link } from "react-router-dom"
 
 
 const IndexInterview = () => {
-    const [interviews, setInterviews] = useState([])
 
+    const [interviews, setInterviews] = useState([])
 
     useEffect(() => {
         const fetchInterviews = async () => {
             try {
                 const { data } = await indexInterview()
                 setInterviews(data)
+
+
             } catch (e) {
                 console.log(e)
             }
         }
         fetchInterviews()
-    }, [interviews])
+    }, [])
 
 
     return (

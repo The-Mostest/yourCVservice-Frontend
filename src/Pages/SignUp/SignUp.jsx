@@ -42,20 +42,6 @@ const SignUp = ({ setUser, close }) => {
     }
 
 
-    // const handleFileUpload = async (e) => {
-    //     const file = e.target.files[0]
-
-    //     if (!file) return
-
-    //     cosnt data = new FormData()
-    //     data.append('file', file)
-    //     data.append('upload_preset', 'CVUploads')
-    //     data.append('cloud_name', 'dvlpwr3ri')
-
-    //     await fetch
-
-    // }
-
     return (
         <>
             {/* <h1>Sign Up </h1> */}
@@ -85,14 +71,7 @@ const SignUp = ({ setUser, close }) => {
                 <br />
 
                 <label htmlFor="cv">Upload CV: </label>
-                <FileUpload fileUpload={fileUpload} setFileUpload={setFileUpload} setFormData={setFormData} formData={formData} name='cv'/>
-
-                {/* <input
-                    type="file"
-                    name="CV"
-                    accept=".pdf"
-                    onChange={handleFile}
-                /> */}
+                <FileUpload fileUpload={fileUpload} setFileUpload={setFileUpload} setFormData={setFormData} formData={formData} name='cv' />
 
                 <button>Sign Up</button>
             </form>

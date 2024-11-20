@@ -64,7 +64,6 @@ const UpdateInterview = ({ setInterview, close}) => {
 
     return (
         <>
-            {/* <h1>Job Interview Form</h1> */}
             {error.errorMessage && <p style={{ color: "red" }}>{error.errorMessage}</p>}
 
             <form onSubmit={handleSubmit}>

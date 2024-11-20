@@ -4,7 +4,7 @@ import { Modal, Button } from '@mantine/core';
 import AddInterview from "../JobInterview/AddInterview/AddInterView"
 import IndexInterview from '../JobInterview/IndexInterview/IndexInterview';
 
-const Homepage = () => {
+const Homepage = ({user}) => {
     const [opened, { open, close }] = useDisclosure(false);
 
 
@@ -36,7 +36,7 @@ const Homepage = () => {
             </Modal>
             <Button onClick={open}>Add an Interview</Button>
 
-            <IndexInterview />
+            <IndexInterview user={user}/>
 
 
 

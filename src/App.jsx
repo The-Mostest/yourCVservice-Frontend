@@ -24,7 +24,7 @@ function App() {
 
   }
 
-
+console.log(user)
   return (
     <>
       <nav>
@@ -34,8 +34,8 @@ function App() {
       <Routes>
         {user ? (
           <>
-            <Route path="" element={<Homepage />} />
-            <Route path="jobinterview/" element={<IndexInterview />} />
+            <Route path="" element={<Homepage user={user}/>} />
+            <Route path="jobinterview/" element={<IndexInterview  />} />
             <Route path="jobinterview/:jobId/" element={<ShowInterview />} />
             <Route path="jobinterview/:jobId/edit/" element={<UpdateInterview />} />
             <Route path="CV/" element={<CVPage user={user} />} />

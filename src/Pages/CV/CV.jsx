@@ -1,10 +1,7 @@
+import RenderPDF from "../../Components/PDFReader"
 
 
-
-
-const CVPage = () => {
-
-
+const CVPage = ({user}) => {
 
 
     return (
@@ -15,7 +12,7 @@ const CVPage = () => {
         
         
         
-        
+        <RenderPDF file={user.cv}/>
         
         
         

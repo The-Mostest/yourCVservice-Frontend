@@ -12,7 +12,6 @@ import SignIn from '../../Pages/SignIn/SignIn'
 const NavBar = ({ user, handleSignOut, setUser }) => {
     const [opened, { open, close }] = useDisclosure(false);
 
-
     return (
         <>
 
