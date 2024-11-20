@@ -3,7 +3,7 @@
     z-index: 1;
     width: 15vw;
     height: 5vh;
-    bottom: 30vh;
+    top: 40vh;
     left: 15vw;
     background-color: black;
     border-radius: 15px;
@@ -22,7 +22,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    bottom:70vh;
+    bottom: 70vh;
     left: 60vw;
     color: white;
 
@@ -30,5 +30,43 @@
     h1 {
         padding: 0;
         margin: 0;
+    }
+}
+
+.whatWeDo {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+
+    .boxCollection {
+        display: flex;
+        width: 50vw;
+        height: fit-content;
+        text-align: justify;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .boxes {
+        width: 20vw;
+        margin: 2%;
+
+        h2 {
+            text-align: left;
+            margin: 2%;
+        }
+
+        p {
+            margin: 2%;
+        }
+    }
+
+    #officeSpace {
+        display: block;
+        width: 30vw;
+        height: 35vh;
     }
 }
