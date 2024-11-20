@@ -2,7 +2,7 @@ import { useState } from "react"
 import { signup } from "../../services/userService"
 import { useNavigate } from "react-router-dom"
 import FileUpload from "../../Components/FileUpload"
-
+import styles from './SignUp.module.scss'
 
 const SignUp = ({ setUser, close }) => {
     const [error, setError] = useState({})
@@ -73,7 +73,7 @@ const SignUp = ({ setUser, close }) => {
                 <label htmlFor="cv">Upload CV: </label>
                 <FileUpload fileUpload={fileUpload} setFileUpload={setFileUpload} setFormData={setFormData} formData={formData} name='cv' />
 
-                <button>Sign Up</button>
+                <button >Sign Up</button>
             </form>
 
 
