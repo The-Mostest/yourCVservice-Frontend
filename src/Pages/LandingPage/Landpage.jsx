@@ -27,8 +27,10 @@ const LandingPage = ({ setUser }) => {
             </Modal>
 
             <div className={styles.HeaderText}>
-                <h1>Make your Job Hunt</h1>
-                <h1>So Much Easier</h1>
+                <div className={styles.headerTextH1}>
+                    <h1>Make your Job Hunt</h1>
+                    <h1>So Much Easier</h1>
+                </div>
             </div>
 
 
@@ -72,16 +74,40 @@ const LandingPage = ({ setUser }) => {
 
 
             </div>
+            <div className={styles.aboutUsCont}>
 
-            <img src="../../public/images/handshake.jpg" id={styles.handshakeImage} />
-            <h2>
-                ABOUT US
-            </h2>
-            <p>
-                Founded by Finn McDougall, our mission is to revolutionize the job search process by providing intuitive tools and expert
-                resources that empower job seekers to achieve their career goals. With a passion for innovation and a commitment to helping others succeed,
-                Finn has created a platform designed to simplify and enhance every step of your job search journey.
-            </p>
+                <img src="../../public/images/handshake.jpg" id={styles.handshakeImage} />
+
+                <div className={styles.aboutUsText}>
+                    <h2>
+                        ABOUT US
+                    </h2>
+                    <p>
+                        Founded by Finn McDougall, our mission is to revolutionize the job search process by providing intuitive tools and expert
+                        resources that empower job seekers to achieve their career goals. With a passion for innovation and a commitment to helping others succeed,
+                        Finn has created a platform designed to simplify and enhance every step of your job search journey.
+                    </p>
+                </div>
+            </div>
+
+
+            <div className={styles.contactUsCont}>
+                <h1> Contact Us</h1>
+                <div className={styles.contactBoxes}>
+
+                <div className={styles.contactBox} id={styles.contactBox1}>
+                </div>
+
+                <div className={styles.contactBox} id={styles.contactBox2}>
+                </div>
+
+                <div className={styles.contactBox} id={styles.contactBox3}>
+                </div>
+
+                </div>
+            </div>
+
+
         </>
     );
 };
