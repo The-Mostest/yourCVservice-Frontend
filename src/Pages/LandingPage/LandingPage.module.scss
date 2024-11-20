@@ -1,3 +1,5 @@
+
+
 .signInButton {
     position: relative;
     width: 15vw;
@@ -132,14 +134,14 @@
     }
 
     #contactBox1 {
-        background-image: url('../../public/images/map.png');
+        background-image: url('/images/map.png');
         background-size: cover;
         height: 40vh;
         width: 33%;
     }
 
     #contactBox2 {
-        background-image: url('../../public/images/BoardMeeting.png');
+        background-image: url('/images/BoardMeeting.png');
         background-size: cover;
         height: 40vh;
         width: 34%;

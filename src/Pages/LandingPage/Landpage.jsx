@@ -106,17 +106,17 @@ const LandingPage = ({ setUser }) => {
                             <h1> Lets Have A Chat</h1>
 
                             <div className={styles.call}>
-                                <img src="../../public/images/call.png" />
+                                <img src="/images/call.png" />
                                 <h2>01234567890</h2>
                             </div>
 
                             <div className={styles.email}>
-                                <img src="../../public/images/email.png" />
+                                <img src="/images/email.png" />
                                 <h2>fake@mindyabuinsess.com</h2>
                             </div>
 
                             <div className={styles.location}>
-                                <img src="../../public/images/location.png" />
+                                <img src="/images/location.png" />
                                 <h2>fake location, fake address, hush up</h2>
                             </div>
 

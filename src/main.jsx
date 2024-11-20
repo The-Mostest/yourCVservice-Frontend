@@ -1,6 +1,7 @@
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
-import styles from './main.modual.scss'
+
+import './assets/main.scss'
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
