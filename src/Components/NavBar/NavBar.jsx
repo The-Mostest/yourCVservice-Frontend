@@ -26,13 +26,15 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
 
                         <img src="/images/logo.png" alt="Website Logo" />
                         < Link to='/'>Home</Link>
-                        < Link to='/advice'>Advice On Interviews</Link>
+                        <a href='#boxCollection'>About Us</a>
+                        <a href='#boxCollection'>Contact Us</a>
                     </div>
 
                     {user ? (
                         <>
                             < Link to='/CV'>CV</Link>
                             < Link to='/' onClick={handleSignOut}>Sign out</Link>
+                            < Link to='/advice'>Advice On Interviews</Link>
                         </>
 
                     )

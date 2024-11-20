@@ -12,6 +12,12 @@ const LandingPage = ({ setUser }) => {
             <Button onClick={() => setSlowTransitionOpened(true)} className={styles.signInButton} >GIVE IT A TRY</Button>
             <img src="../../public/images/CorporateBuilding.jpg" className={styles.headerImage} />
 
+            <div className={styles.HeaderText}>
+                <div className={styles.headerTextH1}>
+                    <h1>Make your Job Hunt</h1>
+                    <h1>So Much Easier</h1>
+                </div>
+            </div>
 
 
             <Modal
@@ -26,12 +32,6 @@ const LandingPage = ({ setUser }) => {
                 <SignUp setUser={setUser} close={() => setSlowTransitionOpened(false)} />
             </Modal>
 
-            <div className={styles.HeaderText}>
-                <div className={styles.headerTextH1}>
-                    <h1>Make your Job Hunt</h1>
-                    <h1>So Much Easier</h1>
-                </div>
-            </div>
 
 
             <div className={styles.whatWeDo}>
@@ -40,7 +40,7 @@ const LandingPage = ({ setUser }) => {
 
                 <div>
 
-                    <div className={styles.boxCollection}>
+                    <div className={styles.boxCollection} >
                         <div className={styles.boxes}>
                             <h2>Track Your Job Search Journey</h2>
                             <p>
@@ -56,13 +56,13 @@ const LandingPage = ({ setUser }) => {
                         </div>
 
                         <div className={styles.boxes}>
-                            <h2>Expert Advice to Ace Every Interview</h2>
+                            <h2>Expert Advice for Every Interview</h2>
                             <p>
                                 Prepare for interviews with tailored advice, sample questions, and proven best practices. Gain the confidence and skills to leave a strong impression and excel in even the most challenging interview situations.
                             </p>
                         </div>
 
-                        <div className={styles.boxes}>
+                        <div className={styles.boxes} id="boxCollection">
                             <h2>Empowering You to Get Hired</h2>
                             <p>
                                 We streamline your job search with powerful tools and actionable insights, helping you stay focused, stand out, and secure the role that matches your ambitions and skills faster.
@@ -107,17 +107,17 @@ const LandingPage = ({ setUser }) => {
 
                             <div className={styles.call}>
                                 <img src="/images/call.png" />
-                                <h2>01234567890</h2>
+                                <h3>01234567890</h3>
                             </div>
 
                             <div className={styles.email}>
                                 <img src="/images/email.png" />
-                                <h2>fake@mindyabuinsess.com</h2>
+                                <h3>fake@mindyabuinsess.com</h3>
                             </div>
 
                             <div className={styles.location}>
                                 <img src="/images/location.png" />
-                                <h2>fake location, fake address, hush up</h2>
+                                <h3>fake location, fake address, hush up</h3>
                             </div>
 
                         </div>

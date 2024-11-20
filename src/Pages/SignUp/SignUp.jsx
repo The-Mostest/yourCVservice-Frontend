@@ -73,7 +73,7 @@ const SignUp = ({ setUser, close }) => {
                 <label htmlFor="cv">Upload CV: </label>
                 <FileUpload fileUpload={fileUpload} setFileUpload={setFileUpload} setFormData={setFormData} formData={formData} name='cv' />
 
-                <button >Sign Up</button>
+                <button className={styles.signUpButton}>Sign Up</button>
             </form>
 
 
