@@ -1,5 +1,4 @@
-import RenderPDF from "../../Components/PDFReader"
-
+import RenderPDF from "../../Components/PDFReader/PDFReader"
 
 const CVPage = ({user}) => {
 

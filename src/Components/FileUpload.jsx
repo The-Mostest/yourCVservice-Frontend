@@ -1,6 +1,4 @@
 import fileUploadService from '../services/fileUpload'
-import RenderPDF from './PDFReader'
-import ReactPDF from '@react-pdf/renderer'
 
 const FileUpload = ({  setFileUpload, setFormData, formData, name}) => {
 

@@ -22,9 +22,12 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
 
             <nav>
                 <div className={styles.desktop}>
-                    <img src="/images/logo.png" alt="Website Logo" />
-                    < Link to='/'>Home</Link>
-                    < Link to='/advice'>Advice On Interviews</Link>
+                    <div className={styles.leftNav}>
+
+                        <img src="/images/logo.png" alt="Website Logo" />
+                        < Link to='/'>Home</Link>
+                        < Link to='/advice'>Advice On Interviews</Link>
+                    </div>
 
                     {user ? (
                         <>
@@ -39,7 +42,7 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
                                 <Modal opened={opened} onClose={close} centered withCloseButton={true} title={<h1>Sign Up </h1>} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
                                     <SignIn setUser={setUser} close={close} />
                                 </Modal>
-                                < Link onClick={open} >sign in</Link>
+                                < Link onClick={open}>sign in</Link>
                             </>
                         )
                     }
