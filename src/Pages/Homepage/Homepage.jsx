@@ -20,7 +20,7 @@ const Homepage = ({user}) => {
                 onClose={close}
                 withCloseButton={true}
                 centered
-                title={<h1>Job Interview Form</h1>}
+                title={false}
 
             >
                 <img

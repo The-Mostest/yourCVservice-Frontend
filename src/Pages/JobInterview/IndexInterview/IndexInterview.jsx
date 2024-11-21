@@ -3,7 +3,11 @@ import { indexInterview } from "../../../services/interviewServices"
 import { Link } from "react-router-dom"
 
 
+
+import styles from './IndexInterview.module.scss'
+
 const IndexInterview = () => {
+
 
     const [interviews, setInterviews] = useState([])
 
@@ -22,20 +26,23 @@ const IndexInterview = () => {
     }, [])
 
 
+
     return (
         <>
+
+            <h1>hello</h1>
+
 
             {interviews.map((e) => {
                 return (
                     <Link key={e.id} to={`/jobinterview/${e.id}/`} >
-                        <li >
-                            {e.applying_role} at {e.company} on {new Date(e.date).toLocaleDateString()} @ {new Date(e.date).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-                        </li>
+
+                        {e.applying_role} at {e.company} on {new Date(e.date).toLocaleDateString()} @ {new Date(e.date).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+
                     </Link>
+
                 )
-            }
-            )
-            }
+            })}
 
 
 

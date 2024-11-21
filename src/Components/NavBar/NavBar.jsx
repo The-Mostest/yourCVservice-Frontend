@@ -26,21 +26,21 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
 
                         <img src="/images/logo.png" alt="Website Logo" />
                         < Link to='/'>Home</Link>
-                        <a href='#boxCollection'>About Us</a>
-                        <a href='#boxCollection'>Contact Us</a>
                     </div>
 
                     {user ? (
                         <>
                             < Link to='/CV'>CV</Link>
-                            < Link to='/' onClick={handleSignOut}>Sign out</Link>
                             < Link to='/advice'>Advice On Interviews</Link>
+                            < Link to='/' onClick={handleSignOut}>Sign out</Link>
                         </>
 
                     )
                         :
                         (
                             <>
+                                <a href='#boxCollection'>About Us</a>
+                                <a href='#boxCollection'>Contact Us</a>
                                 <Modal opened={opened} onClose={close} centered withCloseButton={true} title={false} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
                                     <SignIn setUser={setUser} close={close} />
                                 </Modal>

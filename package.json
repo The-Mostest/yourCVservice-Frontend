@@ -17,6 +17,8 @@
     "@react-pdf/renderer": "^4.1.4",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "embla-carousel-autoplay": "^8.5.1",
+    "embla-carousel-react": "^8.5.1",
     "mapbox-gl": "^3.8.0",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
