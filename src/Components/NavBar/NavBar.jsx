@@ -41,7 +41,7 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
                         :
                         (
                             <>
-                                <Modal opened={opened} onClose={close} centered withCloseButton={true} title={<h1>Sign Up </h1>} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
+                                <Modal opened={opened} onClose={close} centered withCloseButton={true} title={false} overlayProps={{ backgroundOpacity: 0.6, blur: 2, }}>
                                     <SignIn setUser={setUser} close={close} />
                                 </Modal>
                                 < Link onClick={open}>sign in</Link>

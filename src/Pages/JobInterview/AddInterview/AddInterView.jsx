@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { createInterview } from "../../../services/interviewServices";
 import { useNavigate } from "react-router-dom";
-
+import styles from './AddInterView.module.scss'
 
 
 const AddInterview = ({ close }) => {
@@ -131,7 +131,8 @@ const AddInterview = ({ close }) => {
                 />
                 <br />
 
-                <label htmlFor="location">Location (Latitude and Longitude): </label>
+                <label htmlFor="location">Location: </label>
+                <label> Latitude: </label>
                 <input
                     type="text"
                     name="location_lat"
@@ -139,6 +140,7 @@ const AddInterview = ({ close }) => {
                     value={formData.location_lat}
                     onChange={handleChange}
                 />
+                <label> Longitude: </label>
                 <input
                     type="text"
                     name="location_long"

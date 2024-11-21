@@ -3,6 +3,7 @@ import { Modal, Button } from '@mantine/core';
 
 import AddInterview from "../JobInterview/AddInterview/AddInterView"
 import IndexInterview from '../JobInterview/IndexInterview/IndexInterview';
+import styles from './Homepage.module.scss'
 
 const Homepage = ({user}) => {
     const [opened, { open, close }] = useDisclosure(false);

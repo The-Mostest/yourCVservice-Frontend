@@ -4,11 +4,12 @@ import { useState } from "react"
 import { signin } from "../../services/userService"
 import { useNavigate } from "react-router-dom"
 
+import styles from './SignIn.module.scss'
 
 
 
 
-const SignIn = ({setUser, close}) => {
+const SignIn = ({ setUser, close }) => {
     const [error, setError] = useState({})
 
 
@@ -30,7 +31,7 @@ const SignIn = ({setUser, close}) => {
         close()
 
         try {
-            const {user} = await signin(formData)
+            const { user } = await signin(formData)
             setUser(user)
             navigate('/')
         } catch (error) {
@@ -43,8 +44,10 @@ const SignIn = ({setUser, close}) => {
 
 
     return (
-        <>
-            {/* <h1>Sign In</h1> */}
+        <div className={styles.signIn}>
+
+            <img src="/images/logo.png" alt="Website Logo" />
+            <h1> Sign In </h1>
 
             {error.errorMessage && <p style={{ color: "red" }}>{error.errorMessage}</p>}
 
@@ -66,7 +69,7 @@ const SignIn = ({setUser, close}) => {
 
 
 
-        </>
+        </div>
     )
 }
 

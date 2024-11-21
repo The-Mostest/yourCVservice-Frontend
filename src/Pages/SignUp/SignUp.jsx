@@ -43,35 +43,46 @@ const SignUp = ({ setUser, close }) => {
 
 
     return (
-        <>
+        <div className={styles.signUp}>
             {/* <h1>Sign Up </h1> */}
             {error.errorMessage && <p style={{ color: "red" }}>{error.errorMessage}</p>}
+            <img src="/images/logo.png" alt="Website Logo" />
+            <h1> Sign Up</h1>
 
 
             <form onSubmit={handleSubmit}>
 
-                <label htmlFor="username" >Username: </label>
-                <input type='text' name="username" placeholder="John Doe" value={formData.username} onChange={handleChange} />
 
-                <br />
+                <div className={styles.boxes}>
+                    <label htmlFor="username" >Username: </label>
+                    <input type='text' name="username" placeholder="John Doe" value={formData.username} onChange={handleChange} />
+                </div>
 
-                <label htmlFor="email" >Email: </label>
-                <input type='text' name="email" placeholder="JohnDoe@gmail.com" value={formData.email} onChange={handleChange} />
 
-                <br />
+                <div className={styles.boxes}>
+                    <label htmlFor="email" >Email: </label>
+                    <input type='text' name="email" placeholder="JohnDoe@gmail.com" value={formData.email} onChange={handleChange} />
+                </div>
 
-                <label htmlFor="password" >Password: </label>
-                <input type='password' name="password" placeholder="password" value={formData.password} onChange={handleChange} />
 
-                <br />
+                <div className={styles.boxes}>
+                    <label htmlFor="password" >Password: </label>
+                    <input type='password' name="password" placeholder="password" value={formData.password} onChange={handleChange} />
+                </div>
 
-                <label htmlFor="password_confirmation" >Confirm Password: </label>
-                <input type='password' name="password_confirmation" placeholder="password" value={formData.password_confirmation} onChange={handleChange} />
 
-                <br />
+                <div className={styles.boxes}>
+                    <label htmlFor="password_confirmation" >Confirm Password: </label>
+                    <input type='password' name="password_confirmation" placeholder="password" value={formData.password_confirmation} onChange={handleChange} />
+                </div>
 
-                <label htmlFor="cv">Upload CV: </label>
-                <FileUpload fileUpload={fileUpload} setFileUpload={setFileUpload} setFormData={setFormData} formData={formData} name='cv' />
+
+
+                <div className={styles.boxes}>
+                    <label htmlFor="cv">Upload CV: </label>
+                    <FileUpload fileUpload={fileUpload} setFileUpload={setFileUpload} setFormData={setFormData} formData={formData} name='cv' />
+                </div>
+
 
                 <button className={styles.signUpButton}>Sign Up</button>
             </form>
@@ -86,7 +97,7 @@ const SignUp = ({ setUser, close }) => {
 
 
 
-        </>
+        </div>
     )
 }
 

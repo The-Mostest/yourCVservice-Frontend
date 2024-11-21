@@ -10,7 +10,7 @@ const LandingPage = ({ setUser }) => {
     return (
         <>
             <Button onClick={() => setSlowTransitionOpened(true)} className={styles.signInButton} >GIVE IT A TRY</Button>
-            <img src="../../public/images/CorporateBuilding.jpg" className={styles.headerImage} />
+            <img src="images/CorporateBuilding.jpg" className={styles.headerImage} />
 
             <div className={styles.HeaderText}>
                 <div className={styles.headerTextH1}>
@@ -25,7 +25,7 @@ const LandingPage = ({ setUser }) => {
                 onClose={() => setSlowTransitionOpened(false)}
                 transitionProps={{ transition: "scale" }}
                 centered
-                title={<h1>Sign Up </h1>}
+                title={false}
                 withCloseButton={true}
                 overlayProps={{ backgroundOpacity: 0.6, blur: 2 }}
             >
@@ -37,6 +37,7 @@ const LandingPage = ({ setUser }) => {
             <div className={styles.whatWeDo}>
 
                 <img src="../../public/images/office.webp" id={styles.officeSpace} />
+                
 
                 <div>
 
