@@ -41,14 +41,16 @@ const Homepage = ({ user }) => {
             <div className={styles.calendar}></div>
 
 
-            <Button onClick={open} className={styles.addInterviewButton}>Add an Interview</Button>
 
 
 
+            <div className={styles.sides}>
 
-            <IndexInterview user={user} />
+                <IndexInterview user={user} />
 
+                <Button onClick={open} className={styles.addInterviewButton}>Add an Interview</Button>
 
+            </div>
 
 
 
