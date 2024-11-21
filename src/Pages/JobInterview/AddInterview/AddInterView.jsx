@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import { createInterview } from "../../../services/interviewServices";
 import { useNavigate } from "react-router-dom";
-import styles from './AddInterView.module.scss'
+import styles from './AddInterview.module.scss'
 
 
 const AddInterview = ({ close }) => {
