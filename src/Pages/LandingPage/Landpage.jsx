@@ -9,7 +9,7 @@ const LandingPage = ({ setUser }) => {
 
     return (
         <>
-            <Button onClick={() => setSlowTransitionOpened(true)} className={styles.signInButton} >GIVE IT A TRY</Button>
+            <Button onClick={() => setSlowTransitionOpened(true)} className={styles.signUnButton} >GIVE IT A TRY</Button>
             <img src="images/CorporateBuilding.jpg" className={styles.headerImage} />
 
             <div className={styles.HeaderText}>
