@@ -1,4 +1,4 @@
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 import {
   PrevButton,
   NextButton,
@@ -8,13 +8,13 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Link } from 'react-router-dom'
 
-
+import { indexInterview } from '../../services/interviewServices.js'
 
 const EmblaCarousel = (props) => {
 
 
 
-  const { options } = props
+  const { options, setInterviews, interviews } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -36,6 +36,22 @@ const EmblaCarousel = (props) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
+  useEffect(() => {
+    const fetchInterviews = async () => {
+        try {
+            const { data } = await indexInterview()
+            setInterviews(data)
+
+
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    fetchInterviews()
+}, [])
+
+
+
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -44,13 +60,12 @@ const EmblaCarousel = (props) => {
           {props.interviews.map((e) => {
             return (
               <div className="embla__slide" key={e.id}>
+                  <Link to={`/jobinterview/${e.id}/`}>
                 <div className="embla__slide__number">
 
-                  <Link to={`/jobinterview/${e.id}/`}>
                     <h5>
                       {e.applying_role}
                     </h5>
-                  </Link>
                   <h6>
                     {e.company}
                     <br />
@@ -61,6 +76,7 @@ const EmblaCarousel = (props) => {
                     {new Date(e.date).toLocaleDateString()} @ {new Date(e.date).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                   </h6>
                 </div>
+                  </Link>
               </div>
             )
           })}

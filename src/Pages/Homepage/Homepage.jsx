@@ -19,7 +19,6 @@ const Homepage = ({ user }) => {
                 withCloseButton={true}
                 centered
                 title={false}
-
             >
                 <img
                     src="/images/CloseIcon.png"
