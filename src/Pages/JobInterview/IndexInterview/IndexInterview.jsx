@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react"
 import { indexInterview } from "../../../services/interviewServices"
 import { Link } from "react-router-dom"
-import { Carousel } from "react-bootstrap";
+import { Carousel } from '@mantine/carousel';
+
+
+import '@mantine/carousel/styles.css';
 
 
 
-import styles from './IndexInterview.module.scss'
+
+import '../../../Components/Embla/embla.css'
+import '../../../Components/Embla/base.css'
+
+import EmblaCarousel from "../../../Components/Embla/EmblaCarousel";
 
 const IndexInterview = () => {
 
@@ -26,31 +33,16 @@ const IndexInterview = () => {
         fetchInterviews()
     }, [])
 
-
+    const OPTIONS = { loop: true }
+    const SLIDE_COUNT = 5
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
     return (
         <>
 
-            <h1>hello</h1>
 
 
-            {interviews.map((e) => {
-                return (
-                    <Link key={e.id} to={`/jobinterview/${e.id}/`} >
-
-                        {e.applying_role} at {e.company} on {new Date(e.date).toLocaleDateString()} @ {new Date(e.date).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
-
-                    </Link>
-
-                )
-            })}
-
-
-
-
-
-
-
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} interviews={interviews} />
 
 
 
