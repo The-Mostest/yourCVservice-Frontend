@@ -19,6 +19,9 @@ const Homepage = ({ user }) => {
                 withCloseButton={true}
                 centered
                 title={false}
+                classNames={{
+                    modal: styles.modal, // Apply the CSS class to the modal container
+                }}
             >
                 <img
                     src="/images/CloseIcon.png"
@@ -46,9 +49,9 @@ const Homepage = ({ user }) => {
 
             <div className={styles.sides}>
 
+                <Button onClick={open} className={styles.addInterviewButton}>Add an Interview</Button>
                 <IndexInterview user={user} />
 
-                <Button onClick={open} className={styles.addInterviewButton}>Add an Interview</Button>
 
             </div>
 

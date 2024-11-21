@@ -1,0 +1,17 @@
+.CVPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .AI {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 30vh;
+        width: 75vw;
+        border: 2px solid black;
+    }
+}

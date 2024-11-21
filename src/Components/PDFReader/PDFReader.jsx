@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Document, Page } from 'react-pdf'
 import { pdfjs } from 'react-pdf';
-
+import styles from './PDFRender.module.scss'
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -22,15 +22,18 @@ const RenderPDF = ({file}) => {
     
 
     return (
-        <>
-
+        <div className={styles.CV}>
+            {file ? 
             <Document file={file} onLoadSuccess={onDocumentLoadSuccess} >
                 <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false} />
             </Document> 
+        :
+        <h1>Upload your CV here</h1>    
+        }
 
 
 
-        </>
+        </div>
     )
 }
 

@@ -31,7 +31,7 @@ const NavBar = ({ user, handleSignOut, setUser }) => {
                     {user ? (
                         <>
                             < Link to='/CV'>CV</Link>
-                            < Link to='/advice'>Advice On Interviews</Link>
+                            {/* < Link to='/advice'>Advice On Interviews</Link> */}
                             < Link to='/' onClick={handleSignOut}>Sign out</Link>
                         </>
 
