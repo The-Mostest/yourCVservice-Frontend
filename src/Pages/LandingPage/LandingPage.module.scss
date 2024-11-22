@@ -26,7 +26,7 @@
     width: 39.49%;
     bottom: 40vh;
     left: 60vw;
-    color: white;
+    color: white !important;
 
 
     .headerTextH1 {
@@ -101,11 +101,11 @@
     }
 
     .aboutUsText {
+        color: white;
         position: relative;
         bottom: 25vh;
         padding: 1%;
         left: 50vw;
-        color: white;
         background-color: rgba(0, 0, 0, 0.8);
         border-radius: 15px 0px 0px 15px ;
         width: 49.55%;

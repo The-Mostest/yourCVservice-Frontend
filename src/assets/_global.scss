@@ -1,8 +1,41 @@
+body {
+    background-color: black;
+}
+
 a {
     text-decoration: none;
     color: black;
 }
 
-.mantine-Modal-content {
-    width: 50vw;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: #373839;
+}
+
+
+
+.mantine-Modal-inner {
+    width: 100%;
+    
+    .mantine-Modal-content {
+        background-color: #8DAAA0;
+        border: 2px solid black;
+        border-radius: 5px;
+        flex-grow: 0.1;
+        
+        .mantine-Modal-header {
+            background-color: #8DAAA0;
+        }
+        
+        .mantine-Modal-body {
+            display: flex;
+            margin: 1%;
+        }
+    }
+
 }

@@ -1,9 +1,15 @@
+body {
+    background-color: #BCD0CA;
+}
+
+
 .homepage {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100%;
-    margin-top: 5%;
+    margin-top: 1%;
 
     .calendar {
         justify-content: center;
@@ -14,12 +20,6 @@
         border: 5px solid black;
     }
 
-    .sides {
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        align-items: center;
 
         .addInterviewButton {
             width: fit-content;
@@ -28,8 +28,11 @@
             border-radius: 15px;
             border: 1px solid white;
             font-size: 1em;
+            align-self: flex-start;
         }
 
-    }
-
+        h3 {
+            align-self: flex-start;
+            margin-bottom: 0;
+        }
 }

@@ -36,7 +36,7 @@ const LandingPage = ({ setUser }) => {
 
             <div className={styles.whatWeDo}>
 
-                <img src="../../public/images/office.webp" id={styles.officeSpace} />
+                <img src="images/office.webp" id={styles.officeSpace} />
                 
 
                 <div>
@@ -77,7 +77,7 @@ const LandingPage = ({ setUser }) => {
             </div>
             <div className={styles.aboutUsCont}>
 
-                <img src="../../public/images/handshake.jpg" id={styles.handshakeImage} />
+                <img src="images/handshake.jpg" id={styles.handshakeImage} />
 
                 <div className={styles.aboutUsText}>
                     <h2>
