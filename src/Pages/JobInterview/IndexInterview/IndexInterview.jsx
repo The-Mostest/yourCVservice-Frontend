@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react"
 import { indexInterview } from "../../../services/interviewServices"
-import { Link } from "react-router-dom"
-import { Carousel } from '@mantine/carousel';
 
 
 import '@mantine/carousel/styles.css';
