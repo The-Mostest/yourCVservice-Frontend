@@ -39,9 +39,17 @@ const IndexInterview = () => {
     return (
         <>
 
+            {interviews.length === 0 ? (
+
+                <h1>No interviews setup just yet!</h1>
+            ) : (
+
+                < EmblaCarousel  options={OPTIONS} interviews={interviews}  setInterviews={setInterviews}  />
+        )
 
 
-            <EmblaCarousel  options={OPTIONS} interviews={interviews}  setInterviews={setInterviews}  />
+        }
+
 
 
 
