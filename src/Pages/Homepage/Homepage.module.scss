@@ -2,7 +2,9 @@ body {
     background-color: #BCD0CA;
 }
 
-
+.fc-media-screen {
+    width: 100vw;
+}
 .homepage {
     display: flex;
     flex-direction: column;
@@ -11,14 +13,7 @@ body {
     height: 100%;
     margin-top: 1%;
 
-    .calendar {
-        justify-content: center;
-        width: 50vw;
-        height: 50vh;
-        background-image: url('./images/calendar.png');
-        object-fit: cover;
-        border: 5px solid black;
-    }
+
 
 
         .addInterviewButton {
