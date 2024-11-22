@@ -2,9 +2,6 @@ body {
     background-color: #BCD0CA;
 }
 
-.fc-media-screen {
-    width: 100vw;
-}
 .homepage {
     display: flex;
     flex-direction: column;
@@ -15,19 +12,30 @@ body {
 
 
 
-
-        .addInterviewButton {
-            width: fit-content;
-            height: 5vh;
-            background-color: black;
-            border-radius: 15px;
-            border: 1px solid white;
-            font-size: 1em;
-            align-self: flex-start;
-        }
+    .cont {
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 0;
 
         h3 {
-            align-self: flex-start;
             margin-bottom: 0;
         }
+    }
+
+
+    .addInterviewButton {
+        width: fit-content;
+        height: 2vh;
+        background-color: black;
+        border-radius: 15px;
+        border: 1px solid white;
+        font-size: 1em;
+    }
+
+    h1 {
+        margin-bottom: 3%;
+    }
+
 }

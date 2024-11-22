@@ -42,15 +42,17 @@ const Homepage = ({ user }) => {
 
             <h1> Lets get this bread!</h1>
 
-            <h3>Here is you upcoming Interview __________</h3>
+            <h3>Here is your next upcoming Interview __________</h3>
 
             <div><CalendarBox user={user} /></div>
 
 
             <div className={styles.index}>
-                <h3> Here is a rotation of all your upcoming interviews</h3>
-                <IndexInterview user={user} />
-                <Button onClick={open} className={styles.addInterviewButton}>Add an Interview</Button>
+                <div className={styles.cont}>
+                    <h3> Here is a rotation of all your upcoming interviews</h3>
+                    <Button onClick={open} className={styles.addInterviewButton}>Add Interview</Button>
+                </div>
+                    <IndexInterview user={user} />
             </div>
 
 
